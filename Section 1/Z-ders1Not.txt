@@ -22,3 +22,4 @@ git push
 
 DOM(document object model) Tree
 
+JQuery'de selector (cheat sheet) https://oscarotero.com/jquery/

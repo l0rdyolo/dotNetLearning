@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>JQuery Selector</title>
+</head>
+<body>
+      <ul>
+            <li>Lorem ipsum dolor sit.</li>
+            <li>Eveniet, ut! Eaque, fugiat?</li>
+            <li class="red">Necessitatibus assumenda quam optio.</li>
+            <li>Tenetur aliquam incidunt explicabo!</li>
+            <li>Nulla, distinctio? Optio, velit.</li>
+            <li id="item5">Ipsam libero fuga voluptas.</li>
+            <li title="bird">Doloremque molestias dicta ea?</li>
+            <li class="red">Provident iusto quia dolor.</li>
+            <li title="description">Dolores culpa iste aut!</li>
+            <li>At consequatur rerum inventore?</li>
+      </ul>
+
+      <p title="another description"> Lorem ipsum<span class="red">dolor</span>amet.</p>
+
+      <script src="jquery-3.6.0.min.js"></script>
+      <script>
+
+            $("*").css({
+                  "margin":"10px",
+                  "color":"white",
+                  "background-color":"black"
+            }) //all
+
+            // tag
+            $("li").append(" :)");
+            $("ul").css("list-style","upper-roman")
+
+            // class
+            $(".red").css("color","red");
+
+            //id 
+            $("#item5").css("text-decoration","underline")
+
+            //attribute 
+            $('[title="description"]').css("background-color","green")
+            $('[title="bird"]').css("background-color","purple")
+
+            //multi
+            $("#item5, .red").prepend("+ ")
+
+            //css hierarchy
+            $("p>.red").css("color","green")
+
+            //siblings : #item5
+            $("#item5 ~ *").css("border-left","3px solid yellow")
+      </script>
+</body>
+</html>
