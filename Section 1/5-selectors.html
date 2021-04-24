@@ -10,17 +10,21 @@
       <ul>
             <li>Lorem ipsum dolor sit.</li>
             <li>Eveniet, ut! Eaque, fugiat?</li>
-            <li class="red">Necessitatibus assumenda quam optio.</li>
+            <li class="red">Necessitatibus bird assumenda quam optio.</li>
             <li>Tenetur aliquam incidunt explicabo!</li>
             <li>Nulla, distinctio? Optio, velit.</li>
-            <li id="item5">Ipsam libero fuga voluptas.</li>
+            <li id="item5">Ipsam libero bird fuga voluptas.</li>
             <li title="bird">Doloremque molestias dicta ea?</li>
-            <li class="red">Provident iusto quia dolor.</li>
+            <li class="red">Provident bird iusto quia dolor.</li>
             <li title="description">Dolores culpa iste aut!</li>
             <li>At consequatur rerum inventore?</li>
       </ul>
 
       <p title="another description"> Lorem ipsum<span class="red">dolor</span>amet.</p>
+
+      <p> 
+            <a href="https://www.google.com">Google</a>
+      </p>
 
       <script src="jquery-3.6.0.min.js"></script>
       <script>
@@ -47,12 +51,19 @@
 
             //multi
             $("#item5, .red").prepend("+ ")
-
+            
             //css hierarchy
             $("p>.red").css("color","green")
 
             //siblings : #item5
             $("#item5 ~ *").css("border-left","3px solid yellow")
+
+            // content filter 
+            //if li.constains bird ?
+            $("li:contains('bird')").append(" X")
+
+            $("p:has(a)").append(" +")
+
       </script>
 </body>
 </html>
