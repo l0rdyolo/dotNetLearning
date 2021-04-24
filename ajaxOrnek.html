@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+<body>
+      <textarea name="bilgi" id="bilgi" cols="69" rows="20"></textarea>
+
+      <script src="jquery-3.6.0.min.js"></script>
+      <script>
+            $.ajax({
+                  url:"ders1Not.txt",
+                  type:"get",
+                  success: function(cevap){
+                        $("#bilgi").val(cevap);
+                  }
+            })
+            // ders1Not.txt i oku sayfaya getir
+      </script>
+</body>
+</html>

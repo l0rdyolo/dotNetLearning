@@ -9,9 +9,24 @@
 <body>
       <p id="paragraf">Merhaba dünya</p>
 
+      <input type="text" id="adet">
+
+      <button id="btnGoster">Aşağıdaki metni göster</button>
+      <p id="metin" style="display : none"> Lorem lorem lorem </p>
+
       <script src="jquery-3.6.0.min.js"></script>
       <script>
             $("#paragraf").css("background-color","green");
+
+            $("#adet").val(3); //id'si adet olan elementlerin değerini 3 yap
+
+            $("#btnGoster").click(function(){
+                 // $("#metin").show()
+                 $("#metin").toggle()
+            });
+                   //display none olan metin'i click eventinde göster (display none olunca <p> ekranda görünmeyecektir)
+                  //.show() basılınca gösterecek ve öyle kalacak
+                  //.toggle() gösteriliyorsa kapat , kapalıysa göster
       </script>
 </body>
 </html>

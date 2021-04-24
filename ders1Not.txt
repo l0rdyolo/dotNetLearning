@@ -1,0 +1,24 @@
+#########################Github#########################
+
+#ilk yükleme
+
+git init
+git add . //tüm dosyaları ekle
+git commit -m "jquery giriş" //bir mesajla kaydediyorsun
+git remote add origin https://www.url.com 
+git push -u origin master
+
+-------------Not-------------
+git status //eklenen dosyaları gösterir
+-----------------------------
+
+#sonraki yüklemeler
+
+git add .
+git commit -m "değişikliği anlatan kısa mesaj"
+git push
+
+#########################Github-end#########################
+
+DOM(document object model) Tree
+
