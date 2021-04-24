@@ -26,6 +26,34 @@
             <a href="https://www.google.com">Google</a>
       </p>
 
+      <div style="display:none">
+            Hidden div
+      </div>
+
+      <div style="display:none">
+            Hidden div 2
+            <a href="https://www.google.com">Google</a>
+      </div>
+
+      <button onclick="showItem()"> Show hidden items</button>
+
+      <br><br>
+
+      <form action="">
+            <label for="name">Name : </label>
+            <input type="text"><br>
+            <label for="lastname">Lastname : </label>
+            <input type="text"><br>
+            <label for="city">City : </label>
+            <select>
+                  <option value="6">Ankara</option>
+                  <option value="34">Istanbul</option>
+                  <option value="35">Izmır</option>
+            </select>
+
+            <input type="button" value="Send" >
+      </form>
+
       <script src="jquery-3.6.0.min.js"></script>
       <script>
 
@@ -63,6 +91,31 @@
             $("li:contains('bird')").append(" X")
 
             $("p:has(a)").append(" +")
+
+            function showItem(){
+                  $(":hidden").show();
+            }
+
+            //change textbox
+            $("input[type='text']").css("background-color","grey")
+
+            $("input[value='Send']").after(" *")
+            //Change "Send" to "Save"
+            $("input:button").val("Save")
+
+            //child filters
+            //ul>li>li[odd] append("odd")
+            //ul>li>li[even] append("even")
+
+            $("ul > li:nth-child(odd)").append(" [1]")
+
+            $("ul > li:nth-child(even)").append(" [0]")
+
+            //ul>li>li[3]
+            $("ul>li:nth-child(4)").text("JQUERY").css({
+                  "text-align":"center",
+                  "background-color":"grey"
+            })
 
       </script>
 </body>
