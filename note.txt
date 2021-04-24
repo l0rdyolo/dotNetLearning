@@ -1,0 +1,5 @@
+git init
+git add . //tüm dosyaları ekle
+git commit -m "jquery giriş" //bir mesajla kaydediyorsun
+git remote add origin https://www.url.com 
+git push -u origin master
