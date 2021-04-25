@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Traversing</title>
+</head>
+<body>
+      
+      <ul id="list">
+            <li>Name1</li>
+            <li>Name22</li>
+            <li>Name333</li>
+            <li>Name4444</li>
+            <li>Name55555</li>
+            <li>Name666666</li>
+      </ul>
+
+      <script src="jquery-3.6.0.min.js"></script>
+      <script>
+            // append ( length ) each Name
+            //vanilla js
+            /*
+            var names = document.querySelectorAll("#list>li");
+            for(var i = 0;i<names.length;i++){
+                  var name = names[i].textContent;
+                  names[i].textContent += " : "+name.length; 
+            }
+            */
+            
+
+            //jQuery
+            /*
+            $("#list>li").each(function(index,element){
+                  var name = $(this).text();
+                  $(this).append(" : "+name.length)
+            })
+            */
+
+            var myArr = ["Name1" , "Name2","Name3","Name4","Name5"];
+
+            /*
+            //vanilla js
+            var ul = document.createElement("ul");
+            for (const name of myArr){
+                  let li = document.createElement("li");
+                  li.innerText = name;
+                  ul.appendChild(li);
+            }
+
+            let firstUl = document.getElementById("list");
+            firstUl.parentNode.insertBefore(ul,firstUl);
+            */
+
+            //jQuery
+            var newUl = $("<ul/>")
+            $.each(myArr , function(index,name){
+                  //createElement <li/>
+                  $("<li/>").text(name).appendTo(newUl);
+                  newUl.insertBefore("#list");
+                  
+            })
+
+      </script>
+</body>
+</html>
